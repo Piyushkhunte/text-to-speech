@@ -12,8 +12,8 @@ import numpy as np
 import soundfile as sf
 import torch
 
-from backend.app.core.config import settings
-from backend.app.schemas.tts import (
+from ..core.config import settings
+from ..schemas.tts import (
     AudioFormat,
     HistoryItem,
     PitchLevel,
@@ -23,9 +23,9 @@ from backend.app.schemas.tts import (
     TTSGenerateResponse,
     VoiceMetadata,
 )
-from backend.app.services.audio_converter import AudioConverter
-from backend.app.services.history_manager import history_manager
-from backend.app.utils.hindi_validator import validate_hindi_input
+from .audio_converter import AudioConverter
+from .history_manager import history_manager
+from ..utils.hindi_validator import validate_hindi_input
 
 logger = logging.getLogger(__name__)
 
@@ -190,7 +190,7 @@ class TTSEngine:
         """Synthesizes high-fidelity speech with full bilingual/code-mixing support."""
         import edge_tts
 
-        from backend.app.utils.hindi_validator import contains_devanagari
+        from ..utils.hindi_validator import contains_devanagari
 
         voice_info = VOICE_NEURAL_MAP.get(speaker_id.lower(), VOICE_NEURAL_MAP["kabir"])
         # If input text is pure Latin Roman Hinglish (no Devanagari characters),
@@ -209,7 +209,7 @@ class TTSEngine:
         elif style == SpeakingStyle.MONOTONE:
             pitch_str = "+0Hz"
 
-        from backend.app.services.story_director import normalize_hinglish_pronunciation
+        from .story_director import normalize_hinglish_pronunciation
         clean_speech_text = normalize_hinglish_pronunciation(text)
 
         communicate = edge_tts.Communicate(
@@ -278,11 +278,11 @@ class TTSEngine:
 
         start_time = time.time()
 
-        from backend.app.services.gemini_tts import (
+        from .gemini_tts import (
             generate_gemini_speech,
             is_gemini_tts_enabled,
         )
-        from backend.app.services.story_director import (
+        from .story_director import (
             StoryDirector,
             clean_markdown_and_punctuation,
             has_scene_tags,
@@ -395,7 +395,7 @@ class TTSEngine:
         return list(HINDI_VOICES.values())
 
     def get_health_status(self) -> Dict:
-        from backend.app.services.gemini_tts import is_gemini_tts_enabled
+        from .gemini_tts import is_gemini_tts_enabled
         gemini_active = is_gemini_tts_enabled()
         gpu_avail = torch.cuda.is_available()
         gpu_name = torch.cuda.get_device_name(0) if gpu_avail else None

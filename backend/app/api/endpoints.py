@@ -4,8 +4,8 @@ from typing import Optional
 from fastapi import APIRouter, HTTPException, Query, Response, status
 from fastapi.responses import FileResponse
 
-from backend.app.core.config import settings
-from backend.app.schemas.tts import (
+from ..core.config import settings
+from ..schemas.tts import (
     GenerationUpdateRequest,
     HealthResponse,
     HistoryItem,
@@ -15,8 +15,8 @@ from backend.app.schemas.tts import (
     VoiceMetadata,
     VoicesListResponse,
 )
-from backend.app.services.history_manager import history_manager
-from backend.app.services.tts_engine import HINDI_VOICES, tts_engine
+from ..services.history_manager import history_manager
+from ..services.tts_engine import HINDI_VOICES, tts_engine
 
 logger = logging.getLogger(__name__)
 

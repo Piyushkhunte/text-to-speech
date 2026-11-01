@@ -5,10 +5,10 @@ from fastapi import FastAPI, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from backend.app.api.endpoints import router as tts_router
-from backend.app.core.config import settings
-from backend.app.services.history_manager import history_manager
-from backend.app.services.tts_engine import tts_engine
+from .api.endpoints import router as tts_router
+from .core.config import settings
+from .services.history_manager import history_manager
+from .services.tts_engine import tts_engine
 
 # Setup logging
 logging.basicConfig(

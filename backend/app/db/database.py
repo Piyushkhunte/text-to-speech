@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Generator, Optional
 
-from backend.app.core.config import settings
+from ..core.config import settings
 
 logger = logging.getLogger(__name__)
 

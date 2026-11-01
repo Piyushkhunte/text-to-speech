@@ -5,16 +5,16 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
-from backend.app.core.config import settings
-from backend.app.db.crud_generations import (
+from ..core.config import settings
+from ..db.crud_generations import (
     create_generation,
     delete_generation,
     get_generation,
     get_generations,
     update_generation,
 )
-from backend.app.db.database import init_db
-from backend.app.schemas.tts import HistoryItem
+from ..db.database import init_db
+from ..schemas.tts import HistoryItem
 
 logger = logging.getLogger(__name__)
 

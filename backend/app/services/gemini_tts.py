@@ -7,10 +7,10 @@ from pathlib import Path
 from typing import Dict, Optional, Tuple
 
 import imageio_ffmpeg
-from backend.app.core.config import settings
-from backend.app.schemas.tts import PitchLevel, SpeakingStyle
-from backend.app.services.audio_converter import AudioConverter
-from backend.app.services.story_director import normalize_hinglish_pronunciation
+from ..core.config import settings
+from ..schemas.tts import PitchLevel, SpeakingStyle
+from .audio_converter import AudioConverter
+from .story_director import normalize_hinglish_pronunciation
 
 logger = logging.getLogger(__name__)
 

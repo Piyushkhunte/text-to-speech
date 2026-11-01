@@ -8,10 +8,10 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 import edge_tts
-from backend.app.core.config import settings
-from backend.app.schemas.tts import PitchLevel, SpeakingStyle
-from backend.app.services.audio_converter import AudioConverter
-from backend.app.utils.hindi_validator import contains_devanagari
+from ..core.config import settings
+from ..schemas.tts import PitchLevel, SpeakingStyle
+from .audio_converter import AudioConverter
+from ..utils.hindi_validator import contains_devanagari
 
 logger = logging.getLogger(__name__)
 

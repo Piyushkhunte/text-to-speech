@@ -4,8 +4,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
-from backend.app.core.config import settings
-from backend.app.db.database import get_db_connection
+from ..core.config import settings
+from .database import get_db_connection
 
 logger = logging.getLogger(__name__)
 
