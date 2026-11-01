@@ -1,0 +1,35 @@
+# Python
+backend/venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Audio outputs & caches
+backend/generated_audio/*.wav
+backend/generated_audio/*.mp3
+!backend/generated_audio/.gitkeep
+backend/generated_audio/history.json
+*.wav
+*.mp3
+*.webm
+
+# Local databases and logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Node & Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+.DS_Store
+*.local
+
+# Environment variables
+.env
+backend/.env
+frontend/.env.local

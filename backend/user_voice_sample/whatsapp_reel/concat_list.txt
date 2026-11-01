@@ -1,0 +1,7 @@
+file 'C:/Users/hp/OneDrive/Desktop/text-to-voice/backend/user_voice_sample/whatsapp_reel/scene_0.wav'
+file 'C:/Users/hp/OneDrive/Desktop/text-to-voice/backend/user_voice_sample/whatsapp_reel/silence_0.wav'
+file 'C:/Users/hp/OneDrive/Desktop/text-to-voice/backend/user_voice_sample/whatsapp_reel/scene_1.wav'
+file 'C:/Users/hp/OneDrive/Desktop/text-to-voice/backend/user_voice_sample/whatsapp_reel/silence_1.wav'
+file 'C:/Users/hp/OneDrive/Desktop/text-to-voice/backend/user_voice_sample/whatsapp_reel/scene_2.wav'
+file 'C:/Users/hp/OneDrive/Desktop/text-to-voice/backend/user_voice_sample/whatsapp_reel/silence_2.wav'
+file 'C:/Users/hp/OneDrive/Desktop/text-to-voice/backend/user_voice_sample/whatsapp_reel/scene_3.wav'
